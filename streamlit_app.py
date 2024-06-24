@@ -18,6 +18,7 @@ from langchain.schema.runnable import RunnableMap
 from langchain_community.vectorstores import DocArrayInMemorySearch
 from langchain_core.prompts import ChatPromptTemplate
 from pathlib import Path
+import os 
 
 #Variables to hold our different documents to be used.
 fileTroy = "prompt_answer.csv"
@@ -26,9 +27,13 @@ fileOS = "RAGDocuments/prompt_OS_answer.csv"
 #Get API Key from Secrets file into a variable.
 apikey = st.secrets["API_KEY"]
 
+#Add api key as OS environment - Google Genai prefers it
+os.environ["GOOGLE_API_KEY"] = apikey
+
 #A function to load a document.
 def DocLoader(fileName):    
-   loader = CSVLoader(Path(fileName), csv_args={'delimiter':','})
+   rootPath = '/workspaces/NLP-RD2'
+   loader = CSVLoader(Path(rootPath,fileName), csv_args={'delimiter':','})
    return loader.load()
 
 #A function to split a document.
@@ -41,8 +46,6 @@ def DocSplitter(document):
     #items += doc      
    #strList = ','.join(items)
    #return strList
-   for i in splitdocs:
-      st.write(i)
    return str(splitdocs)
 
 #Load our documents used for RAG

@@ -21,7 +21,7 @@ from pathlib import Path
 
 
 #Variables to hold our different documents to be used.
-fileTroy = "/prompt_answer.csv"
+fileTroy = "/workspaces/NLP-RD2/InputDocs/prompt_answer.csv"
 fileOS = "InputDocs/prompt_OS_answer.csv"
 
 #Path variable
@@ -34,7 +34,7 @@ allInputLines = []
 
 #Function to read lines from CSV files
 def ReadCSV(fileName):
-    with open ((fileName),'rb') as file:
+    with open ((fileName),'r') as file:
         lines = file.read()        
         return lines.split("\n\n")
         

@@ -17,16 +17,11 @@ from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain.schema.runnable import RunnableMap
 from langchain_community.vectorstores import DocArrayInMemorySearch
 from langchain_core.prompts import ChatPromptTemplate
-from pathlib import Path
-
 
 #Variables to hold our different documents to be used.
 fileTroy = "/mount/src/nlp-rd2/InputDocs/prompt_answer.csv"
-fileOS = "InputDocs/prompt_OS_answer.csv"
+fileOS = "/mount/src/nlp-rd2/InputDocs/InputDocs/prompt_OS_answer.csv"
 
-#Path variable
-#rootPath = '/workspaces/NLP-RD2'
-rootPath = '/'
 #Get API Key from Secrets file into a variable.
 apikey = st.secrets["API_KEY"]
 
@@ -40,7 +35,7 @@ def ReadCSV(fileName):
         
 
 allInputLines = ReadCSV(fileTroy)
-#allInputLines += ReadCSV(fileOS)
+allInputLines += ReadCSV(fileOS)
 
 
 #Create an embeddings object.

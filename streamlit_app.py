@@ -6,7 +6,7 @@ import os
 import google.generativeai as ggi
 from langchain_community.document_loaders import DirectoryLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter, CharacterTextSplitter
-from langchain_community.document_loaders.csv_loader import CSVLoader
+#from langchain_community.document_loaders.csv_loader import CSVLoader
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import PromptTemplate
 from langchain.chains import LLMChain

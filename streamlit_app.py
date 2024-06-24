@@ -34,7 +34,7 @@ allInputLines = []
 
 #Function to read lines from CSV files
 def ReadCSV(fileName):
-    with open ((fileName),'r') as file:
+    with open ((fileName),'rb') as file:
         lines = file.read()        
         return lines.split("\n\n")
         

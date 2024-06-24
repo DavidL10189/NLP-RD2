@@ -1,3 +1,9 @@
-altair
-pandas
-streamlit
+streamlit-nightly
+google-generativeai
+langchain
+langchain_community
+langchain-core
+langchain-google-genai==1.0.3
+chromadb
+pysqlite3-binary
+docarray

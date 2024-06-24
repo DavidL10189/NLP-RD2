@@ -34,14 +34,18 @@ def DocLoader(fileName):
 #Chunking sizes chosen should cover entire lines and overlap parts of contiguous lines
 def DocSplitter(document):
    splitter = RecursiveCharacterTextSplitter(chunk_size=600, chunk_overlap=200)
-   return splitter.split_documents(document)
+   splitdocs = splitter.split_documents(document)
+   items = []   
+   strList = my_string = ','.join(items)
+   return strList
 
 #Load our documents used for RAG
 loadedTroy = DocLoader(fileTroy)
-loadedOS = DocLoader(fileOS)
+#loadedOS = DocLoader(fileOS)
+
 #Split our documents
 troy_Split = DocSplitter(loadedTroy)
-OS_Split = DocSplitter(loadedOS)
+#OS_Split = DocSplitter(loadedOS)
 
 #Create an embeddings object.
 embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001",google_api_key=apikey)
@@ -74,22 +78,22 @@ responseBody.write("")
 template = """Answer the question based on the following context:
 {context}
 
-Question: {question}
-"""
+#Question: {question}
+#"""
 
 prompt = ChatPromptTemplate.from_template(template)
 
 #Functionality to perform the communication with the API and then display the results.
 if userQuestion:
-   responseTitle.write("Processing")
-   responseBody.write("")   
-   chain = RunnableMap({
+    responseTitle.write("Processing")
+    responseBody.write("")   
+    chain = RunnableMap({
       "context": lambda x: retriever.get_relevant_documents(x["question"]),
       "question": lambda x: x["question"]
-   }) | prompt | model      
-   output = chain.invoke({"question": userQuestion})
-   responseTitle.write("")
-   responseBody.write(output.content)
+    }) | prompt | model      
+    output = chain.invoke({"question": userQuestion})
+    responseTitle.write("")
+    responseBody.write(output.content)
 
 
 

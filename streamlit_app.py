@@ -34,20 +34,14 @@ allInputLines = []
 
 #Function to read lines from CSV files
 def ReadCSV(fileName):
-    with open (Path(rootPath,fileName),'r') as file:
+    with open ((fileName),'r') as file:
         lines = file.read()        
         return lines.split("\n\n")
         
 
 allInputLines = ReadCSV(fileTroy)
-for l in allInputLines:
-    st.write(l)
+#allInputLines += ReadCSV(fileOS)
 
-st.header("HIHIHI")
-
-allInputLines += ReadCSV(fileOS)
-for l in allInputLines:    
-    st.write(l)
 
 #Create an embeddings object.
 embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001",google_api_key=apikey)

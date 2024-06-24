@@ -17,17 +17,18 @@ from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain.schema.runnable import RunnableMap
 from langchain_community.vectorstores import DocArrayInMemorySearch
 from langchain_core.prompts import ChatPromptTemplate
+from pathlib import Path
 
 #Variables to hold our different documents to be used.
-fileTroy = "RAGDocuments/prompt_answer.csv"
+fileTroy = "prompt_answer.csv"
 fileOS = "RAGDocuments/prompt_OS_answer.csv"
 
 #Get API Key from Secrets file into a variable.
 apikey = st.secrets["API_KEY"]
 
 #A function to load a document.
-def DocLoader(fileName):
-   loader = CSVLoader(fileName, csv_args={'delimiter':','})
+def DocLoader(fileName):    
+   loader = CSVLoader(Path(fileName), csv_args={'delimiter':','})
    return loader.load()
 
 #A function to split a document.
@@ -35,9 +36,14 @@ def DocLoader(fileName):
 def DocSplitter(document):
    splitter = RecursiveCharacterTextSplitter(chunk_size=600, chunk_overlap=200)
    splitdocs = splitter.split_documents(document)
-   items = []   
-   strList = my_string = ','.join(items)
-   return strList
+   #items = []
+   #for doc in splitdocs:
+    #items += doc      
+   #strList = ','.join(items)
+   #return strList
+   for i in splitdocs:
+      st.write(i)
+   return str(splitdocs)
 
 #Load our documents used for RAG
 loadedTroy = DocLoader(fileTroy)

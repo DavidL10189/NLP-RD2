@@ -21,7 +21,7 @@ from pathlib import Path
 
 
 #Variables to hold our different documents to be used.
-fileTroy = "/workspaces/NLP-RD2/InputDocs/prompt_answer.csv"
+fileTroy = "/workspaces/NLP-RD2/prompt_answer.csv"
 fileOS = "InputDocs/prompt_OS_answer.csv"
 
 #Path variable

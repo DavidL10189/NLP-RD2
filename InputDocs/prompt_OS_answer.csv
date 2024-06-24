@@ -1,0 +1,5 @@
+prompt	response
+Hi	How can I help you?
+How do you shutdown Windows? You use the Windows shutdown command.
+How do you reboot Windows? You use the Windows shutdown -r command.
+How do you lock Windows? You use the Windows Rundll32.exe user32.dll,LockWorkStation command

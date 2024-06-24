@@ -7,3 +7,5 @@ langchain-google-genai==1.0.3
 chromadb
 pysqlite3-binary
 docarray
+csv
+pandas

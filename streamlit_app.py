@@ -17,6 +17,8 @@ from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain.schema.runnable import RunnableMap
 from langchain_community.vectorstores import DocArrayInMemorySearch
 from langchain_core.prompts import ChatPromptTemplate
+from pathlib import Path
+
 
 #Variables to hold our different documents to be used.
 fileTroy = "/mount/src/nlp-rd2/InputDocs/prompt_answer.csv"

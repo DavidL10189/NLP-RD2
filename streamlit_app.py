@@ -22,7 +22,7 @@ from pathlib import Path
 
 #Variables to hold our different documents to be used.
 fileTroy = "/mount/src/nlp-rd2/InputDocs/prompt_answer.csv"
-fileOS = "/mount/src/nlp-rd2/InputDocs/InputDocs/prompt_OS_answer.csv"
+fileOS = "/mount/src/nlp-rd2/InputDocs/prompt_OS_answer.csv"
 
 #Get API Key from Secrets file into a variable.
 apikey = st.secrets["API_KEY"]

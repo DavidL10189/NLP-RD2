@@ -25,8 +25,8 @@ fileTroy = "prompt_answer.csv"
 fileOS = "InputDocs/prompt_OS_answer.csv"
 
 #Path variable
-rootPath = '/workspaces/NLP-RD2'
-
+#rootPath = '/workspaces/NLP-RD2'
+rootPath = '/'
 #Get API Key from Secrets file into a variable.
 apikey = st.secrets["API_KEY"]
 

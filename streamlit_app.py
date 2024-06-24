@@ -21,7 +21,7 @@ from pathlib import Path
 
 
 #Variables to hold our different documents to be used.
-fileTroy = "InputDocs/prompt_answer.csv"
+fileTroy = "prompt_answer.csv"
 fileOS = "InputDocs/prompt_OS_answer.csv"
 
 #Path variable

@@ -72,7 +72,7 @@ responseBody.write("")
 #The prompt template and prompt.
 template = """ 
 Question: {question}
-Context: {context}
+
 """
 
 prompt = ChatPromptTemplate.from_template(template)
@@ -83,8 +83,7 @@ if userQuestion:
    responseBody.write("")   
    chain = RunnableMap({
       "context": lambda x: retriever.get_relevant_documents(x["question"]),
-      "question": lambda x: x["question"],
-      "kwargs" :{"k":5}
+      "question": lambda x: x["question"]      
    }) | prompt | model      
    output = chain.invoke({"question": userQuestion})
    responseTitle.write("")

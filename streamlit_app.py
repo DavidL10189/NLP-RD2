@@ -72,6 +72,7 @@ responseBody.write("")
 #The prompt template and prompt.
 template = """
 Question: {question}
+Context: {context}
 """
 
 prompt = ChatPromptTemplate.from_template(template)

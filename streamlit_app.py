@@ -71,9 +71,6 @@ responseBody.write("")
 
 #The prompt template and prompt.
 template = """
-
-#{context}
-
 Question: {question}
 """
 

@@ -57,7 +57,7 @@ detailDisplay = "Please ask a question above"
 st.title("Gemini assistant & :red[NLP OS I/F R&D]")
 
 #Create Gemini AI object. Apply the Gemini API Key. Set a loose temperature.
-model = ChatGoogleGenerativeAI(model="gemini-pro", google_api_key=apikey,temperature=0.7,
+model = ChatGoogleGenerativeAI(model="gemini-pro", google_api_key=apikey,temperature=0.9,
                                   convert_system_message_to_human=True)
 
 #Prompt the user to input their request.
@@ -72,6 +72,8 @@ responseBody.write("")
 #The prompt template and prompt.
 template = """Answer the question based on the following context:
 {context}
+
+If you cannot find the answer using the context, answer it without context
 
 Question: {question}
 """

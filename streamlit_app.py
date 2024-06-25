@@ -70,9 +70,9 @@ responseBody = st.empty()
 responseBody.write("")
 
 #The prompt template and prompt.
-template = """Answer the question.
+template = """
 
-{context}
+#{context}
 
 Question: {question}
 """

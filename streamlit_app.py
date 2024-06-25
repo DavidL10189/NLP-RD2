@@ -70,10 +70,8 @@ responseBody = st.empty()
 responseBody.write("")
 
 #The prompt template and prompt.
-template = """ You do not have to use the context to answer.
-
-Context: {context}
-Question: {question}
+template = """ Using the 
+{context} answer the {question}
 """
 
 prompt = ChatPromptTemplate.from_template(template)

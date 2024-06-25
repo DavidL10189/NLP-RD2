@@ -76,12 +76,7 @@ Context: {context}
 Question: {question}
 """
 
-# prompt = ChatPromptTemplate.from_template(template)
-
-prompt_template = PromptTemplate.from_template(
-   template = "Answer the {question} while trying to use the {context}"
-)
-
+prompt = ChatPromptTemplate.from_template(template)
 
 #Functionality to perform the communication with the API and then display the results.
 if userQuestion:

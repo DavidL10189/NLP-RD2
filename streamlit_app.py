@@ -70,7 +70,10 @@ responseBody = st.empty()
 responseBody.write("")
 
 #The prompt template and prompt.
-template = """ 
+template = """ Try to use the context to answer the question, but answer
+without it if you can
+
+
 Context: {context}
 Question: {question}
 """

@@ -84,7 +84,7 @@ if userQuestion:
    chain = RunnableMap({
       "context": lambda x: retriever.get_relevant_documents(x["question"]),
       "question": lambda x: x["question"],
-      "search_kwargs" :{"k":5}
+      "kwargs" :{"k":5}
    }) | prompt | model      
    output = chain.invoke({"question": userQuestion})
    responseTitle.write("")

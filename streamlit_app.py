@@ -57,7 +57,7 @@ detailDisplay = "Please ask a question above"
 st.title("Gemini assistant & :red[NLP OS I/F R&D]")
 
 #Create Gemini AI object. Apply the Gemini API Key. Set a loose temperature.
-model = ChatGoogleGenerativeAI(model="gemini-pro", google_api_key=apikey,temperature=0.5,
+model = ChatGoogleGenerativeAI(model="gemini-pro", google_api_key=apikey,temperature=0.7,
                                   convert_system_message_to_human=True)
 
 #Prompt the user to input their request.

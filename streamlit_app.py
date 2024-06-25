@@ -72,12 +72,12 @@ responseBody.write("")
 #The prompt template and prompt.
 template = """ You do not have to use the context to answer.
 
-
 Context: {context}
 Question: {question}
 """
 
-prompt = ChatPromptTemplate.from_template(template)
+# prompt = ChatPromptTemplate.from_template(template)
+prompt = ChatPromptTemplate.from_strings(template)
 
 #Functionality to perform the communication with the API and then display the results.
 if userQuestion:

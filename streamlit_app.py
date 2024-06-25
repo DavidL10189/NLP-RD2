@@ -79,7 +79,7 @@ Question: {question}
 # prompt = ChatPromptTemplate.from_template(template)
 
 prompt_template = PromptTemplate.from_template(
-    "Answer the {question while trying to use the {context}}"
+    "Answer the {question} while trying to use the {context}}"
 )
 
 

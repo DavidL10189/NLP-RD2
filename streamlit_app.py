@@ -70,8 +70,8 @@ responseBody = st.empty()
 responseBody.write("")
 
 #The prompt template and prompt.
-template = """Answer the question based on the following context. If the answer
-is not in the context then don't use the context
+template = """Try to answer the question based on the following context. 
+You can answer without using the context.
 
 {context}
 

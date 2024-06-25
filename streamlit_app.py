@@ -70,7 +70,7 @@ responseBody = st.empty()
 responseBody.write("")
 
 #The prompt template and prompt.
-template = """ Try to answer the question using the context
+template = """ 
 Question: {question}
 Context: {context}
 """

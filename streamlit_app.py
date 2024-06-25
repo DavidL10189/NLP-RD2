@@ -71,7 +71,7 @@ responseBody.write("")
 
 #The prompt template and prompt.
 template = """Try to answer the question based on the following context. 
-You can answer without using the context.
+You do not have to use the context.
 
 {context}
 

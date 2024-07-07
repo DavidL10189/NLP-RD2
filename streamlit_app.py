@@ -43,20 +43,23 @@ def ReadCSV(fileName):
         lines = file.read()        
         return lines.split("\n\n")
         
+#Function to read all CSV and convert to embeddings
+def CreateEmbeddings():
+    allInputLines = ReadCSV(fileTroy)
+    allInputLines += ReadCSV(fileOS)
+    
+    #Create an embeddings object.
+    embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001",google_api_key=apikey)
 
-allInputLines = ReadCSV(fileTroy)
-allInputLines += ReadCSV(fileOS)
+    #Create a vectorstore for our embeddings
+    vectorstore = DocArrayInMemorySearch.from_texts(
+    allInputLines,
+    embedding=embeddings
+    )
 
+    return vectorstore
 
-#Create an embeddings object.
-embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001",google_api_key=apikey)
-
-vectorstore = DocArrayInMemorySearch.from_texts(
-allInputLines,
-embedding=embeddings
-)
-
-retriever = vectorstore.as_retriever()
+retriever = CreateEmbeddings().as_retriever()
 
 #Text to display status to the user
 headerDisplay = "Hello"

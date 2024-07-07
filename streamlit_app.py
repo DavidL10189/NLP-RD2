@@ -20,14 +20,6 @@ from langchain_core.prompts import ChatPromptTemplate
 from pathlib import Path
 import datetime
 
-@st.cache_data
-def displaytime():
-   time = datetime.datetime.now()
-   return time
-
-time = displaytime()
-st.write(time)
-
 #Variables to hold our different documents to be used.
 fileTroy = "/mount/src/nlp-rd2/InputDocs/prompt_answer.csv"
 fileOS = "/mount/src/nlp-rd2/InputDocs/prompt_OS_answer.csv"
@@ -44,6 +36,7 @@ def ReadCSV(fileName):
         return lines.split("\n\n")
         
 #Function to read all CSV and convert to embeddings
+#@st.cache_data
 def CreateEmbeddings():
     allInputLines = ReadCSV(fileTroy)
     allInputLines += ReadCSV(fileOS)

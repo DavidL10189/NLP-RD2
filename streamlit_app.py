@@ -36,7 +36,7 @@ def ReadCSV(fileName):
         return lines.split("\n\n")
         
 #Function to read all CSV and convert to embeddings
-@st.cache_data
+@st.cache_resource
 def CreateEmbeddings():
     allInputLines = ReadCSV(fileTroy)
     allInputLines += ReadCSV(fileOS)

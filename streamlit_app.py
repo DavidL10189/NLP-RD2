@@ -20,7 +20,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from pathlib import Path
 import datetime
 
-
+@st.cache_data
 def displaytime():
    time = datetime.datetime.now()
    return time

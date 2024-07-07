@@ -22,7 +22,7 @@ import datetime
 
 
 def displaytime():
-   time = datetime.datetime.now();
+   time = datetime.datetime.now()
    return time
 
 st.write(displaytime)

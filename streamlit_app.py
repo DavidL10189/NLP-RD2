@@ -25,7 +25,8 @@ def displaytime():
    time = datetime.datetime.now()
    return time
 
-st.write(displaytime)
+time = displaytime()
+st.write(time)
 
 #Variables to hold our different documents to be used.
 fileTroy = "/mount/src/nlp-rd2/InputDocs/prompt_answer.csv"

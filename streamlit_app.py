@@ -21,7 +21,7 @@ from pathlib import Path
 import datetime
 
 time = datetime.datetime.now();
-st.Write(time)
+st.write(time)
 
 #Variables to hold our different documents to be used.
 fileTroy = "/mount/src/nlp-rd2/InputDocs/prompt_answer.csv"

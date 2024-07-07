@@ -24,7 +24,7 @@ import datetime
 fileTroy = "/mount/src/nlp-rd2/InputDocs/prompt_answer.csv"
 fileOS = "/mount/src/nlp-rd2/InputDocs/prompt_OS_answer.csv"
 
-#Get API Key from Secrets file into a variable.
+#Get API Key from the Secrets file into a variable.
 apikey = st.secrets["API_KEY"]
 
 allInputLines = []

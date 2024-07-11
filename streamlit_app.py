@@ -60,14 +60,14 @@ retriever = CreateEmbeddings().as_retriever()
 headerDisplay = "Hello"
 detailDisplay = "Please ask a question above"
 
-st.title("Gemini assistant & :red[NLP OS I/F R&D]")
+st.title("Gemini OS assistant")
 
 #Create Gemini AI object. Apply the Gemini API Key. Set a loose temperature.
 model = ChatGoogleGenerativeAI(model="gemini-pro", google_api_key=apikey,temperature=0.9,
                                   convert_system_message_to_human=True)
 
 #Prompt the user to input their request.
-userQuestion = st.text_area("You can ask general questions, questions about Troy University, and in the future interface with your OS! Press **CTRL+Enter** to send your question.")
+userQuestion = st.text_area("You can ask questions to interface with your OS! Press **CTRL+Enter** to send your question.")
 
 #Clear the section which displays results from Gemini.
 responseTitle = st.empty()

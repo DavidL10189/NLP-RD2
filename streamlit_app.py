@@ -20,8 +20,10 @@ from langchain_core.prompts import ChatPromptTemplate
 from pathlib import Path
 import datetime
 
+#Perform user authentication
+
 #Variables to hold our different documents to be used.
-fileTroy = "/mount/src/nlp-rd2/InputDocs/prompt_answer.csv"
+#fileTroy = "/mount/src/nlp-rd2/InputDocs/prompt_answer.csv"
 fileOS = "/mount/src/nlp-rd2/InputDocs/prompt_OS_answer.csv"
 
 #Get API Key from the Secrets file into a variable.
@@ -38,8 +40,8 @@ def ReadCSV(fileName):
 #Function to read all CSV and convert to embeddings
 @st.cache_resource
 def CreateEmbeddings():
-    allInputLines = ReadCSV(fileTroy)
-    allInputLines += ReadCSV(fileOS)
+    #allInputLines = ReadCSV(fileTroy)
+    allInputLines = ReadCSV(fileOS)
     
     #Create an embeddings object.
     embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001",google_api_key=apikey)
@@ -74,10 +76,12 @@ responseBody = st.empty()
 responseBody.write("")
 
 #The prompt template and prompt.
-template = """ The
-{context} is optional.  Answer the {question}
+#template = """ The
+#{context} is optional.  Answer the {question}
+#"""
+template = """ Use the 
+{context} to answer the {question}
 """
-
 prompt = ChatPromptTemplate.from_template(template)
 
 #Functionality to perform the communication with the API and then display the results.

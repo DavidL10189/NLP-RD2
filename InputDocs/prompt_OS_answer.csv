@@ -21,9 +21,3 @@ How do I open Microsoft Powerpoint in Windows? Execute: powerpnt
 How do I download Debian from Windows? Execute: msedge www.debian.com
 How do I download Fedora from Windows? Execute: msedge www.getfedora.org
 How do I open a command prompt in Windows? Execute: cmd 
-How do I reboot gnu/linux? Execute: sudo reboot
-How do I see a list of processes in Linux? Execute: ps
-How do I see a tree of processes in Linux? Execute: pstree
-How do I change users in Linux? Execute: su
-How do I elevate my rights and run a command in Linux? Execute: sudo
-How do I shutdown Linux? Execute sudo shutdown -h now

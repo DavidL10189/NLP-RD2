@@ -1,9 +1,9 @@
 prompt	response
 Hi	How can I help you?
-How do you shutdown Windows? You use the Windows shutdown command.
-How do you reboot Windows? You use the Windows shutdown -r command.
-How do you lock Windows? You use the Windows Rundll32.exe user32.dll,LockWorkStation command.
-How do you copy files? You use Windows File Explorer.
-How do your partition a disk? You use diskmgmt.msc.
-How do you open calculator? You execute calc.exe.
-How you you add new local users, run task scheduler, or view events? You use compmgmt.msc.
+How do you shutdown Windows? Execute: shutdown
+How do you reboot Windows? Execute: shutdown -r
+How do you lock Windows? Execute: Rundll32.exe user32.dll,LockWorkStation
+How do you copy files? Execute: explorer.exe
+How do your partition a disk? Execute: diskmgmt.msc
+How do you open calculator? Execute: calc.exe.
+How you you add new local users, run task scheduler, or view events? Execute: compmgmt.msc

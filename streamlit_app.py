@@ -20,7 +20,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from pathlib import Path
 import datetime
 
-#Perform user authentication
+#########Perform user authentication#########
 
 #Variables to hold our different documents to be used.
 #fileTroy = "/mount/src/nlp-rd2/InputDocs/prompt_answer.csv"
@@ -93,5 +93,7 @@ if userQuestion:
       "question": lambda x: x["question"]      
    }) | prompt | model      
    output = chain.invoke({"question": userQuestion})
+   #######Modify to write the answer to the user and confirm if the user wants the command executed#######
+   #######If the user wants the command to be executed, send the command plus user information to the file on the SFTP server#######
    responseTitle.write("")
    responseBody.write(output.content)

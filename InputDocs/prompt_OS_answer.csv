@@ -3,7 +3,27 @@ Hi	How can I help you?
 How do you shutdown Windows? Execute: shutdown
 How do you reboot Windows? Execute: shutdown -r
 How do you lock Windows? Execute: Rundll32.exe user32.dll,LockWorkStation
-How do you copy files? Execute: explorer.exe
-How do your partition a disk? Execute: diskmgmt.msc
-How do you open calculator? Execute: calc.exe.
-How you you add new local users, run task scheduler, or view events? Execute: compmgmt.msc
+How do you copy files in Windows? Execute: explorer.exe
+How do your format or partition a disk in Windows? Execute: diskmgmt.msc
+How do you open calculator in Windows? Execute: calc.exe.
+How you you add new local users, run task scheduler, or view events in Windows? Execute: compmgmt.msc
+How do you change the date or time in Windows? Execute: control /name Microsoft.DateAndTime
+How do you use advanced disk tools in Windows? Execute: diskpart
+How do you open the control panel in Windows? Execute: control
+How do I change my computers name or domain? Execute: sysdm.cpl
+How do I change my display settings in Windows? Execute: desk.cpl
+How do I open MS Edge Browser in Windows? Execute: msedge
+How do I open chrome? Execute: chrome
+How do I open task manager, look at running processes, or close programs in Windows? Execute: taskmgr
+How do I open Microsoft Word in Windows? Execute: msword
+How do I open Microsoft Excel in Windows? Execute: excel
+How do I open Microsoft Powerpoint in Windows? Execute: powerpnt
+How do I download Debian from Windows? Execute: msedge www.debian.com
+How do I download Fedora from Windows? Execute: msedge www.getfedora.org
+How do I open a command prompt in Windows? Execute: cmd 
+How do I reboot gnu/linux? Execute: sudo reboot
+How do I see a list of processes in Linux? Execute: ps
+How do I see a tree of processes in Linux? Execute: pstree
+How do I change users in Linux? Execute: su
+How do I elevate my rights and run a command in Linux? Execute: sudo
+How do I shutdown Linux? Execute sudo shutdown -h now
